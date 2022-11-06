@@ -16,9 +16,11 @@ class Blog extends BaseController
         ];
         $data['posts'] = $posts;
 
-        echo view('templates/header', $data);
-        return view('blog');
-        echo view('templates/footer');
+        // echo view('templates/header', $data);
+        // return view('blog');
+        // echo view('templates/footer');
+
+        return view('blog', $data);
     }
 
     public function post()
@@ -27,8 +29,9 @@ class Blog extends BaseController
             'meta_title' => 'Codeigniter 4 Post Page',
             'title' => 'This is a Single Post Page'
         ];
-        echo view('templates/header', $data);
-        return view('single_post');
-        echo view('templates/footer');
+
+        // echo view('templates/header', $data);
+        return view('single_post', $data);
+        // echo view('templates/footer');
     }
 }
